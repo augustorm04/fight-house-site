@@ -1,24 +1,30 @@
-import React from "react";
-import Header from "../../components/header/Header";
-import SobreNos from "../../components/sobreNos/SobreNos";
-import Modalidades from "../../components/modalidades/Modalidades";
-import Planos from "../../components/planos/Planos";
-import Local from "../../components/local/Local";
-import Footer from "../../components/footer/Footer";
+import React from 'react';
+import '../../components/site/site.css';
+import { Navbar, Hero, Marquee } from '../../components/site/Topo';
+import { Modalidades, Horarios } from '../../components/site/Modalidades';
+import { Planos, Eventos, Sobre, Faq, Contato, Rodape, WhatsFlutuante } from '../../components/site/Secoes';
+import { useRevealAll } from '../../components/site/hooks';
 
 function HomePage() {
+    useRevealAll();
     return (
-        <>
-            <Header />
-            <main style={{backgroundColor: "var(--black)"}}>
-                <SobreNos />
+        <div className="fh">
+            <Navbar />
+            <main>
+                <Hero />
+                <Marquee />
                 <Modalidades />
+                <Horarios />
                 <Planos />
-                <Local />
+                <Eventos />
+                <Sobre />
+                <Faq />
+                <Contato />
             </main>
-            <Footer/>
-        </>
-    )
+            <Rodape />
+            <WhatsFlutuante />
+        </div>
+    );
 }
 
 export default HomePage;
