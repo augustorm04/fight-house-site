@@ -13,10 +13,20 @@
 //    modalidades  ['Kickboxing', 'Muay Thai', ...]
 //    descricao    texto curto
 //    instagram    link do post (https://www.instagram.com/p/XXXX/)
-//    imagem       URL de imagem (opcional)
+//    imagem       flyer do evento (opcional) — coloque o arquivo em public/eventos/
+//                 e use '/eventos/nome-do-arquivo.jpg'
 // =====================================================================
 
 export const eventos = [
+  {
+    titulo: 'Graduação Avançada de Muay Thai',
+    data: '2026-12-06',
+    tipo: 'participa',
+    local: 'Local e horário a confirmar',
+    modalidades: ['Muay Thai'],
+    descricao: 'Graduação avançada da equipe Impacto Muaythai: um novo nível exige mais técnica, disciplina e evolução. Pagamento até 20/11.',
+    imagem: '/eventos/graduacao-avancada-muaythai-2026.jpg',
+  },
   // {
   //   titulo: 'Copa Fight House de Kickboxing',
   //   data: '2027-03-14',

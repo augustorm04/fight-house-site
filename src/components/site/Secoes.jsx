@@ -150,6 +150,12 @@ export function Eventos() {
                       )}
                     </div>
                     <div className="fh-event__actions">
+                      {ev.imagem && (
+                        <a className="fh-event__flyer" href={ev.imagem} target="_blank" rel="noreferrer" aria-label={`Ver flyer: ${ev.titulo}`}>
+                          <img src={ev.imagem} alt={`Flyer: ${ev.titulo}`} loading="lazy" />
+                          <span><i className="bi bi-arrows-angle-expand" /> Ver flyer</span>
+                        </a>
+                      )}
                       {ev.instagram && (
                         <a className="fh-btn fh-btn--sm fh-btn--ghost" href={ev.instagram} target="_blank" rel="noreferrer">
                           <i className="bi bi-instagram" /> Ver post
