@@ -46,6 +46,13 @@ export const professores = {
     bio: 'Faixa preta 2º Dan de Kickboxing. Conduz o kickboxing da manhã e as turmas infantis, ensinando disciplina e respeito de forma leve e divertida.',
     instagram: 'tia_jack.valparaiso',
   },
+  isabel: {
+    nome: 'Maria Isabel Vogel',
+    curto: 'Prof. Isabel', // nome curto usado na grade de horários
+    papel: 'Instrutora · Fight Kids',
+    bio: 'Atleta de kickboxing, faixa marrom e instrutora em formação, totalmente capacitada para conduzir o Fight Kids da manhã. Estudante de Fisioterapia.',
+    instagram: 'mariaisabelvogel',
+  },
   kim: {
     nome: 'Professor Kim',
     curto: 'Prof. Kim', // nome curto usado na grade de horários
@@ -154,7 +161,7 @@ export const modalidades = [
     publico: 'Crianças de 3 a 6 anos',
     intensidade: 1,
     aulas: [
-      { dias: ['ter', 'qui'], hora: '08:30', prof: 'jack' },
+      { dias: ['ter', 'qui'], hora: '08:30', prof: 'isabel' },
       { dias: ['ter', 'qui'], hora: '16:30', prof: 'jack' },
     ],
   },
@@ -209,7 +216,7 @@ export const planos = {
 //  EQUIPE
 // ---------------------------------------------------------------------
 // Ordem em que os professores aparecem na seção "Nossa história".
-export const equipe = ['sergio', 'jack', 'kim', 'victor', 'augusto'].map((id) => ({ id, ...professores[id] }));
+export const equipe = ['sergio', 'jack', 'isabel', 'kim', 'victor', 'augusto'].map((id) => ({ id, ...professores[id] }));
 
 /** Professores de uma modalidade (pelas aulas + campo "professores"). */
 export const professoresDe = (m) =>
