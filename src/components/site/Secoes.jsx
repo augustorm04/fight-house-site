@@ -133,7 +133,13 @@ export function Eventos() {
                     </div>
                     <div className="fh-event__body">
                       <span className={`fh-event__type is-${ev.tipo}`}>
-                        {ev.tipo === 'organiza' ? 'Organizado pela Fight House' : 'Equipe Fight House participa'}
+                        {ev.tipo === 'organiza'
+                          ? 'Organizado pela Fight House'
+                          : ev.tipo === 'participa'
+                            ? 'Equipe Fight House participa'
+                            : fim(ev) >= hoje
+                              ? 'Próximo evento'
+                              : 'Evento realizado'}
                       </span>
                       <h3>{ev.titulo}</h3>
                       {ev.local && (
@@ -160,11 +166,6 @@ export function Eventos() {
                       {ev.instagram && (
                         <a className="fh-btn fh-btn--sm fh-btn--ghost" href={ev.instagram} target="_blank" rel="noreferrer">
                           <i className="bi bi-instagram" /> Ver post
-                        </a>
-                      )}
-                      {fim(ev) >= hoje && (
-                        <a className="fh-btn fh-btn--sm" href={whatsLink(`Olá! Quero saber mais sobre o evento "${ev.titulo}".`)} target="_blank" rel="noreferrer">
-                          Quero participar
                         </a>
                       )}
                     </div>

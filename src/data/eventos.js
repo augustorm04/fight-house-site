@@ -10,6 +10,7 @@
 //    data         'AAAA-MM-DD' (obrigatório) — define se é "próximo" ou "realizado"
 //    ate          'AAAA-MM-DD' (opcional) — último dia, para eventos de vários dias
 //    tipo         'organiza' (a Fight House organiza) | 'participa' (a equipe compete/participa)
+//                 | 'informativo' (só avisa: aparece "Próximo evento" / "Evento realizado")
 //    local        texto livre
 //    modalidades  ['Kickboxing', 'Muay Thai', ...]
 //    descricao    texto curto
@@ -32,7 +33,7 @@ export const eventos = [
   {
     titulo: 'Graduação Avançada de Muay Thai',
     data: '2026-12-06',
-    tipo: 'participa',
+    tipo: 'informativo',
     local: 'Local e horário a confirmar',
     modalidades: ['Muay Thai'],
     descricao: 'Graduação avançada da equipe Impacto Muaythai: um novo nível exige mais técnica, disciplina e evolução. Pagamento até 20/11.',
