@@ -52,7 +52,7 @@ export const eventosExemplo = [
     data: '2026-08-20',
     tipo: 'organiza',
     local: 'Fight House',
-    modalidades: ['Taekwondo', 'Jiu-Jitsu'],
+    modalidades: ['Taekwondo', 'Kickboxing'],
     descricao: 'Exemplo de evento já realizado.',
   },
 ];

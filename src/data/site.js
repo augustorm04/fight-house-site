@@ -9,7 +9,6 @@ import kids from '../assets/modalidade-turma-kids.jpg';
 import muaythai from '../assets/modalidade-muaythai.jpg';
 import personal from '../assets/modalidade-personal.jpg';
 import taekwondo from '../assets/modalidade-taekwondo.jpg';
-import jiujitsu from '../assets/modalidade-jiujitsu.png';
 
 export const contato = {
   whatsapp: '5561981865159', // só números, com DDI 55
@@ -83,22 +82,6 @@ export const modalidades = [
     ],
   },
   {
-    id: 'jiujitsu',
-    nome: 'Jiu-Jitsu',
-    imagem: jiujitsu,
-    cor: '#4DA3FF',
-    chamada: 'Técnica que vence a força',
-    descricao:
-      'Arte marcial focada em projeções, imobilizações e finalizações no solo. Trabalha força, resistência, flexibilidade e raciocínio estratégico — o famoso “xadrez humano”. Ideal para defesa pessoal, controle corporal e competições.',
-    beneficios: ['Raciocínio estratégico', 'Flexibilidade e mobilidade', 'Defesa pessoal sem impacto', 'Controle emocional'],
-    publico: 'Jovens e adultos, todos os níveis',
-    intensidade: 4,
-    aulas: [
-      { dias: ['ter', 'qui'], hora: '09:00' },
-      { dias: ['ter', 'qui'], hora: '18:00' },
-    ],
-  },
-  {
     id: 'taekwondo',
     nome: 'Taekwondo',
     imagem: taekwondo,
@@ -162,7 +145,7 @@ export const modalidades = [
 export const planos = {
   individual: [
     { nome: '1 modalidade', preco: 100, desc: 'Escolha a luta que mais combina com você', destaque: false },
-    { nome: '2 modalidades', preco: 145, desc: 'Combine em pé e chão, ou dobre o volume', destaque: true, selo: 'Mais escolhido' },
+    { nome: '2 modalidades', preco: 145, desc: 'Combine duas lutas ou dobre o volume', destaque: true, selo: 'Mais escolhido' },
     { nome: '3 modalidades', preco: 165, desc: 'Para quem quer viver a luta de verdade', destaque: false, selo: 'Melhor custo' },
   ],
   familia: [
@@ -190,7 +173,7 @@ export const faq = [
   { q: 'A aula experimental é paga?', a: 'Não! A aula experimental é gratuita. Chame a gente no WhatsApp, escolha a modalidade e o horário, e venha conhecer a academia. Venha com roupa confortável de treino e uma garrafinha de água.' },
   { q: 'Preciso comprar equipamento logo de cara?', a: 'Não. Para começar você só precisa de roupa de treino. Com o tempo indicamos o equipamento certo para cada modalidade (luvas, bandagem, caneleira, kimono...).' },
   { q: 'Qual a idade mínima para a turma kids?', a: 'A partir de 3 anos! O Fight Kids é para crianças de 3 a 6 anos (terça e quinta, 8h30 ou 16h30) e a turma infantil de kickboxing recebe a partir de 7 anos (segunda, quarta e sexta, 17h). O Taekwondo também recebe crianças.' },
-  { q: 'Posso fazer mais de uma modalidade?', a: 'Sim! Os planos de 2 e 3 modalidades têm desconto progressivo — e combinar lutas em pé com jiu-jitsu é uma ótima escolha.' },
+  { q: 'Posso fazer mais de uma modalidade?', a: 'Sim! Os planos de 2 e 3 modalidades têm desconto progressivo — e combinar, por exemplo, boxe com muay thai é uma ótima escolha.' },
   { q: 'Tem plano família?', a: 'Tem. A partir de 2 pessoas da mesma família o valor por pessoa cai bastante. Veja a aba “Família” nos planos.' },
 ];
 
