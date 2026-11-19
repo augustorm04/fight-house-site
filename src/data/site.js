@@ -27,8 +27,54 @@ export const whatsLink = (msg = 'Olá! Vim pelo site e quero agendar uma aula ex
 export const instagramLink = `https://www.instagram.com/${contato.instagram}/`;
 
 // ---------------------------------------------------------------------
+//  PROFESSORES
+//  "instagram": só o @, sem a arroba. "site" é opcional.
+//  Cada aula (abaixo, em MODALIDADES) aponta para um professor pelo id.
+// ---------------------------------------------------------------------
+export const professores = {
+  sergio: {
+    nome: 'Sérgio Ramos',
+    curto: 'Prof. Sérgio', // nome curto usado na grade de horários
+    papel: 'Fundador · Boxe e Kickboxing',
+    bio: 'Fundador da Fight House, faixa preta 3º Dan de Kickboxing e delegado da CBKB em Goiás. Formador de campeões no boxe e no kickboxing.',
+    instagram: 'sergioramosafh',
+  },
+  jack: {
+    nome: 'Jacquelinne Vasconcellos',
+    curto: 'Tia Jack', // nome curto usado na grade de horários
+    papel: 'Cofundadora · Tia Jack · Kickboxing e Kids',
+    bio: 'Faixa preta 2º Dan de Kickboxing. Conduz o kickboxing da manhã e as turmas infantis, ensinando disciplina e respeito de forma leve e divertida.',
+    instagram: 'tia_jack.valparaiso',
+  },
+  kim: {
+    nome: 'Professor Kim',
+    curto: 'Prof. Kim', // nome curto usado na grade de horários
+    papel: 'Muay Thai · Impacto Muay Thai',
+    bio: 'Professor de muay thai da equipe Impacto Muay Thai. Todas as turmas de muay thai da Fight House são da Impacto.',
+    instagram: 'kim_valparaiso_muay_thai',
+  },
+  victor: {
+    nome: 'Victor Ferrari',
+    curto: 'Mestre Victor', // nome curto usado na grade de horários
+    papel: 'Mestre de Taekwondo · Equipe Keumgang',
+    bio: 'Mestre de taekwondo à frente da Equipe Keumgang, com turmas na Fight House e em outros centros de Valparaíso.',
+    instagram: 'taekwondo_keumgang',
+  },
+  augusto: {
+    nome: 'Augusto Sérgio',
+    curto: 'Augusto Sérgio', // nome curto usado na grade de horários
+    papel: 'Multicampeão · Personal Fight',
+    bio: 'Atleta da Seleção Brasileira de Kickboxing, Top 8 do mundo (WAKO), Top 1 do Brasil (CBKB) e lutador profissional. Conduz as aulas particulares de boxe e kickboxing.',
+    instagram: 'augustorm04',
+    site: 'https://augustoalmeidakb.com.br',
+  },
+};
+
+export const instaLink = (user) => `https://www.instagram.com/${user}/`;
+
+// ---------------------------------------------------------------------
 //  MODALIDADES
-//  "aulas": cada item = dias da semana + horário.
+//  "aulas": cada item = dias da semana + horário + professor (id acima).
 //  Dias: 'seg' | 'ter' | 'qua' | 'qui' | 'sex' | 'sab'
 // ---------------------------------------------------------------------
 export const modalidades = [
@@ -44,8 +90,8 @@ export const modalidades = [
     publico: 'Jovens e adultos, do iniciante ao competidor',
     intensidade: 4,
     aulas: [
-      { dias: ['seg', 'qua', 'sex'], hora: '19:00' },
-      { dias: ['ter', 'qui'], hora: '07:00' },
+      { dias: ['seg', 'qua', 'sex'], hora: '19:00', prof: 'sergio' },
+      { dias: ['ter', 'qui'], hora: '07:00', prof: 'sergio' },
     ],
   },
   {
@@ -60,8 +106,8 @@ export const modalidades = [
     publico: 'Jovens e adultos, todos os níveis',
     intensidade: 5,
     aulas: [
-      { dias: ['seg', 'qua', 'sex'], hora: '08:00' },
-      { dias: ['seg', 'qua', 'sex'], hora: '20:30' },
+      { dias: ['seg', 'qua', 'sex'], hora: '08:00', prof: 'jack' },
+      { dias: ['seg', 'qua', 'sex'], hora: '20:30', prof: 'sergio' },
     ],
   },
   {
@@ -71,14 +117,15 @@ export const modalidades = [
     cor: '#FF5A36',
     chamada: 'A arte das oito armas',
     descricao:
-      'Arte marcial tailandesa que utiliza punhos, cotovelos, joelhos e canelas — por isso é chamada de “arte das oito armas”. Melhora força, resistência e flexibilidade, sendo ideal para defesa pessoal, condicionamento e competições.',
+      'Arte marcial tailandesa que utiliza punhos, cotovelos, joelhos e canelas — por isso é chamada de “arte das oito armas”. Melhora força, resistência e flexibilidade, sendo ideal para defesa pessoal, condicionamento e competições. As turmas são da equipe Impacto Muay Thai, com o professor Kim.',
+    equipe: { nome: 'Impacto Muay Thai', instagram: 'impactomuaythai' },
     beneficios: ['Corpo inteiro trabalhando', 'Resistência física e mental', 'Defesa pessoal eficiente', 'Disciplina'],
     publico: 'Jovens e adultos, todos os níveis',
     intensidade: 5,
     aulas: [
-      { dias: ['seg', 'qua', 'sex'], hora: '07:00' },
-      { dias: ['ter', 'qui'], hora: '20:00' },
-      { dias: ['ter', 'qui'], hora: '21:00' },
+      { dias: ['seg', 'qua', 'sex'], hora: '07:00', prof: 'kim' },
+      { dias: ['ter', 'qui'], hora: '20:00', prof: 'kim' },
+      { dias: ['ter', 'qui'], hora: '21:00', prof: 'kim' },
     ],
   },
   {
@@ -88,11 +135,12 @@ export const modalidades = [
     cor: '#B57BFF',
     chamada: 'Velocidade e precisão olímpica',
     descricao:
-      'Arte marcial coreana e esporte olímpico que combina técnica, velocidade e explosão, com ênfase em chutes rápidos e precisos. Desenvolve flexibilidade, coordenação, disciplina, autocontrole e confiança — dentro e fora do tatame.',
+      'Arte marcial coreana e esporte olímpico que combina técnica, velocidade e explosão, com ênfase em chutes rápidos e precisos. Desenvolve flexibilidade, coordenação, disciplina, autocontrole e confiança — dentro e fora do tatame. Aulas com o mestre Victor Ferrari, da Equipe Keumgang.',
+    equipe: { nome: 'Equipe Keumgang', instagram: 'taekwondo_keumgang' },
     beneficios: ['Flexibilidade', 'Chutes rápidos e precisos', 'Disciplina e foco', 'Esporte olímpico'],
     publico: 'Crianças, jovens e adultos',
     intensidade: 3,
-    aulas: [{ dias: ['ter', 'qui'], hora: '17:30' }],
+    aulas: [{ dias: ['ter', 'qui'], hora: '17:30', prof: 'victor' }],
   },
   {
     id: 'fightkids',
@@ -106,8 +154,8 @@ export const modalidades = [
     publico: 'Crianças de 3 a 6 anos',
     intensidade: 1,
     aulas: [
-      { dias: ['ter', 'qui'], hora: '08:30' },
-      { dias: ['ter', 'qui'], hora: '16:30' },
+      { dias: ['ter', 'qui'], hora: '08:30', prof: 'jack' },
+      { dias: ['ter', 'qui'], hora: '16:30', prof: 'jack' },
     ],
   },
   {
@@ -121,7 +169,7 @@ export const modalidades = [
     beneficios: ['Disciplina e respeito', 'Coordenação motora', 'Combate à timidez', 'Gasto de energia saudável'],
     publico: 'Crianças a partir de 7 anos',
     intensidade: 2,
-    aulas: [{ dias: ['seg', 'qua', 'sex'], hora: '17:00' }],
+    aulas: [{ dias: ['seg', 'qua', 'sex'], hora: '17:00', prof: 'jack' }],
   },
   {
     id: 'personal',
@@ -135,6 +183,7 @@ export const modalidades = [
     publico: 'Qualquer idade e nível',
     intensidade: 4,
     aulas: [],
+    professores: ['augusto'],
     sobConsulta: true,
   },
 ];
@@ -159,11 +208,12 @@ export const planos = {
 // ---------------------------------------------------------------------
 //  EQUIPE
 // ---------------------------------------------------------------------
-export const equipe = [
-  { nome: 'Sérgio Ramos', papel: 'Fundador e head coach', bio: 'Pioneiro das artes marciais em Valparaíso, à frente da Fight House há mais de 17 anos.' },
-  { nome: 'Jacquelinne Vasconcellos', papel: 'Cofundadora · Tia Jack', bio: 'Responsável pela turma kids, ensinando disciplina e respeito de forma leve e divertida.' },
-  { nome: 'Augusto Sérgio', papel: 'Multicampeão · Personal Fight', bio: 'Atleta multicampeão de boxe e kickboxing, conduz as aulas particulares.' },
-];
+// Ordem em que os professores aparecem na seção "Nossa história".
+export const equipe = ['sergio', 'jack', 'kim', 'victor', 'augusto'].map((id) => ({ id, ...professores[id] }));
+
+/** Professores de uma modalidade (pelas aulas + campo "professores"). */
+export const professoresDe = (m) =>
+  [...new Set([...(m.professores || []), ...m.aulas.map((a) => a.prof).filter(Boolean)])].map((id) => ({ id, ...professores[id] }));
 
 // ---------------------------------------------------------------------
 //  PERGUNTAS FREQUENTES
@@ -190,5 +240,5 @@ export const DIAS = [
 
 /** Lista plana: [{ dia, hora, modalidade }] ordenada por horário. */
 export const gradeHorarios = modalidades
-  .flatMap((m) => m.aulas.flatMap((a) => a.dias.map((dia) => ({ dia, hora: a.hora, modalidade: m }))))
+  .flatMap((m) => m.aulas.flatMap((a) => a.dias.map((dia) => ({ dia, hora: a.hora, modalidade: m, prof: professores[a.prof] }))))
   .sort((a, b) => a.hora.localeCompare(b.hora));

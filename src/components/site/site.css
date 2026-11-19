@@ -198,6 +198,9 @@
 }
 .fh-btn--block {
   width: 100%;
+  white-space: normal;
+  text-align: center;
+  padding: 10px 20px;
 }
 .fh-btn i {
   font-size: 1.1em;
@@ -1474,9 +1477,79 @@
   font-weight: 700;
   margin-bottom: 6px !important;
 }
-.fh-member p:last-child {
+.fh-member__bio {
   color: var(--muted);
   font-size: 0.88rem;
+}
+.fh-member__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 8px !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.fh-member__links a,
+.fh-profs a,
+.fh-modal__team a {
+  color: var(--y);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.fh-member__links a:hover,
+.fh-profs a:hover,
+.fh-modal__team a:hover {
+  text-decoration: underline;
+}
+.fh-profs {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 10px;
+  list-style: none;
+}
+.fh-profs li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+.fh-profs li span {
+  display: flex;
+  flex-direction: column;
+}
+.fh-profs small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.fh-profs a {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.fh-modal__team {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.fh-slots small {
+  font-size: 0.75rem;
+  color: var(--c, var(--y));
+  font-weight: 700;
+}
+.fh-chip small {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.fh-daylist span small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
 }
 
 /* ---------- faq ---------- */

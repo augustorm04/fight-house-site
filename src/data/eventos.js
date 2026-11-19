@@ -8,6 +8,7 @@
 //  Campos:
 //    titulo       (obrigatório)
 //    data         'AAAA-MM-DD' (obrigatório) — define se é "próximo" ou "realizado"
+//    ate          'AAAA-MM-DD' (opcional) — último dia, para eventos de vários dias
 //    tipo         'organiza' (a Fight House organiza) | 'participa' (a equipe compete/participa)
 //    local        texto livre
 //    modalidades  ['Kickboxing', 'Muay Thai', ...]
@@ -18,6 +19,16 @@
 // =====================================================================
 
 export const eventos = [
+  {
+    titulo: 'CAMAM 2026 — Campeonato Municipal de Artes Marciais',
+    data: '2026-11-20',
+    ate: '2026-11-22',
+    tipo: 'participa',
+    local: 'Complexo Esportivo Jardim Oriente e Centro de Treinamento de Artes Marciais — Valparaíso de Goiás',
+    modalidades: ['Boxe', 'Kickboxing', 'Taekwondo'],
+    descricao: '5ª edição do maior campeonato de artes marciais de Valparaíso. Abertura 20/11 às 19h; boxe e kickboxing no sábado (21/11); taekwondo no domingo (22/11). Venha torcer pelos nossos atletas!',
+    instagram: 'https://www.instagram.com/camamval/',
+  },
   {
     titulo: 'Graduação Avançada de Muay Thai',
     data: '2026-12-06',

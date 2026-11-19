@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import logo from '../../assets/logo-fight-house-pequeno.png';
-import { planos, equipe, faq, contato, whatsLink, instagramLink, modalidades } from '../../data/site';
+import { planos, equipe, faq, contato, whatsLink, instagramLink, instaLink, modalidades } from '../../data/site';
 import { eventos as eventosFixos, eventosExemplo } from '../../data/eventos';
 import { useCountUp } from './hooks';
 
@@ -82,8 +82,9 @@ export function Eventos() {
 
   const fixos = import.meta.env.DEV && eventosFixos.length === 0 ? eventosExemplo : eventosFixos;
   const hoje = new Date().toISOString().slice(0, 10);
-  const proximos = fixos.filter((e) => e.data >= hoje).sort((a, b) => a.data.localeCompare(b.data));
-  const realizados = fixos.filter((e) => e.data < hoje).sort((a, b) => b.data.localeCompare(a.data));
+  const fim = (e) => e.ate || e.data;
+  const proximos = fixos.filter((e) => fim(e) >= hoje).sort((a, b) => a.data.localeCompare(b.data));
+  const realizados = fixos.filter((e) => fim(e) < hoje).sort((a, b) => b.data.localeCompare(a.data));
 
   useEffect(() => {
     let vivo = true;
@@ -128,7 +129,7 @@ export function Eventos() {
                     <div className="fh-event__date">
                       <b>{d.dia}</b>
                       <span>{d.mes}</span>
-                      <small>{d.ano}</small>
+                      <small>{ev.ate ? `até ${fmtData(ev.ate).dia}/${ev.ate.slice(5, 7)}` : d.ano}</small>
                     </div>
                     <div className="fh-event__body">
                       <span className={`fh-event__type is-${ev.tipo}`}>
@@ -161,7 +162,7 @@ export function Eventos() {
                           <i className="bi bi-instagram" /> Ver post
                         </a>
                       )}
-                      {ev.data >= hoje && (
+                      {fim(ev) >= hoje && (
                         <a className="fh-btn fh-btn--sm" href={whatsLink(`Olá! Quero saber mais sobre o evento "${ev.titulo}".`)} target="_blank" rel="noreferrer">
                           Quero participar
                         </a>
@@ -261,7 +262,7 @@ export function Sobre() {
         </div>
         <div className="fh-team">
           {equipe.map((p, k) => (
-            <article key={p.nome} className="fh-member" data-reveal style={{ '--i': k }}>
+            <article key={p.id} className="fh-member" data-reveal style={{ '--i': k }}>
               <span className="fh-member__avatar" aria-hidden="true">
                 {p.nome
                   .split(' ')
@@ -272,7 +273,17 @@ export function Sobre() {
               <div>
                 <h3>{p.nome}</h3>
                 <p className="fh-member__role">{p.papel}</p>
-                <p>{p.bio}</p>
+                <p className="fh-member__bio">{p.bio}</p>
+                <p className="fh-member__links">
+                  <a href={instaLink(p.instagram)} target="_blank" rel="noreferrer" aria-label={`Instagram de ${p.nome}`}>
+                    <i className="bi bi-instagram" /> @{p.instagram}
+                  </a>
+                  {p.site && (
+                    <a href={p.site} target="_blank" rel="noreferrer">
+                      <i className="bi bi-globe2" /> {p.site.replace(/^https?:\/\//, '')}
+                    </a>
+                  )}
+                </p>
               </div>
             </article>
           ))}

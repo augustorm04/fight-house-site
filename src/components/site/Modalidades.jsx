@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { modalidades, whatsLink, DIAS, gradeHorarios } from '../../data/site';
+import { modalidades, whatsLink, DIAS, gradeHorarios, professores, professoresDe, instaLink } from '../../data/site';
 import { useNowBrasilia } from './hooks';
 
 const diasTexto = (dias) => dias.map((d) => DIAS.find((x) => x.id === d)?.curto).join(' · ');
@@ -115,6 +115,28 @@ export function Modalidades() {
                   <Intensidade n={aberta.intensidade} />
                 </div>
               </div>
+              <h4>{professoresDe(aberta).length > 1 ? 'Professores' : 'Professor'}</h4>
+              <ul className="fh-profs">
+                {professoresDe(aberta).map((p) => (
+                  <li key={p.id}>
+                    <span>
+                      <b>{p.nome}</b>
+                      <small>{p.papel}</small>
+                    </span>
+                    <a href={instaLink(p.instagram)} target="_blank" rel="noreferrer" aria-label={`Instagram de ${p.nome}`}>
+                      <i className="bi bi-instagram" /> @{p.instagram}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {aberta.equipe && (
+                <p className="fh-modal__team">
+                  Equipe:{' '}
+                  <a href={instaLink(aberta.equipe.instagram)} target="_blank" rel="noreferrer">
+                    <i className="bi bi-instagram" /> {aberta.equipe.nome} (@{aberta.equipe.instagram})
+                  </a>
+                </p>
+              )}
               <h4>Horários</h4>
               {aberta.sobConsulta ? (
                 <p>Horários personalizados — combine pelo WhatsApp.</p>
@@ -124,6 +146,7 @@ export function Modalidades() {
                     <li key={k}>
                       <b>{a.hora}</b>
                       <span>{diasTexto(a.dias)}</span>
+                      {a.prof && <small>{professores[a.prof].curto}</small>}
                     </li>
                   ))}
                 </ul>
@@ -173,6 +196,7 @@ export function Horarios() {
       .map((g) => (
         <span key={g.modalidade.id} className="fh-chip" style={{ '--c': g.modalidade.cor }}>
           {g.modalidade.nome}
+          {g.prof && <small>{g.prof.curto}</small>}
         </span>
       ));
 
@@ -258,7 +282,10 @@ export function Horarios() {
               .map((g, k) => (
                 <li key={k} style={{ '--c': g.modalidade.cor }}>
                   <b>{g.hora}</b>
-                  <span>{g.modalidade.nome}</span>
+                  <span>
+                    {g.modalidade.nome}
+                    {g.prof && <small>{g.prof.curto}</small>}
+                  </span>
                 </li>
               ))}
           </ul>
