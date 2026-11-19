@@ -238,7 +238,7 @@ export function Sobre() {
             Uma <em>família</em> forjada no tatame
           </h2>
           <p>
-            A Fight House é referência em artes marciais há mais de 15 anos em Valparaíso de Goiás — uma das academias
+            A Fight House é referência em artes marciais há mais de 17 anos em Valparaíso de Goiás — uma das academias
             pioneiras da região. Fundada pelo professor <b>Sérgio Ramos</b> ao lado de sua esposa{' '}
             <b>Jacquelinne Vasconcellos</b>, nasceu com uma missão: transformar vidas por meio do esporte, promovendo
             disciplina, saúde e superação.
@@ -248,9 +248,9 @@ export function Sobre() {
             que importa é quem você se torna a cada treino.
           </p>
           <div className="fh-stats">
-            <Stat n={15} suf="+" label="anos de história" />
+            <Stat n={17} suf="+" label="anos de história" />
             <Stat n={modalidades.length} suf="" label="modalidades" />
-            <Stat n={6} suf="+" label="anos: idade mínima kids" />
+            <Stat n={3} suf="+" label="anos: idade mínima kids" />
           </div>
         </div>
         <div className="fh-team">

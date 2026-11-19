@@ -60,7 +60,7 @@ export function Navbar() {
           ))}
         </nav>
         <a className="fh-btn fh-btn--sm fh-nav__cta" href={whatsLink()} target="_blank" rel="noreferrer">
-          Aula experimental
+          Aula grátis
         </a>
         <button className="fh-nav__burger" aria-label="Abrir menu" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span />
@@ -98,7 +98,7 @@ export function Hero() {
       <div className="fh-hero__grain" aria-hidden="true" />
       <div className="fh-container fh-hero__content">
         <p className="fh-hero__kicker fh-anim" style={{ '--d': '0.1s' }}>
-          <span className="fh-dot" /> Valparaíso de Goiás · +15 anos de tradição
+          <span className="fh-dot" /> Valparaíso de Goiás · +17 anos de história
         </p>
         <h1 className="fh-hero__title">
           <span className="fh-anim" style={{ '--d': '0.2s' }}>
@@ -114,12 +114,12 @@ export function Hero() {
           </span>
         </h1>
         <p className="fh-hero__lead fh-anim" style={{ '--d': '0.65s' }}>
-          Mais de 15 anos formando atletas e transformando vidas. Do primeiro treino ao pódio, para adultos e crianças a
-          partir de 6 anos.
+          Mais de 17 anos formando atletas e transformando vidas. Todos os níveis e idades — de adultos a crianças a
+          partir de 3 anos. Nunca pare de lutar.
         </p>
         <div className="fh-hero__ctas fh-anim" style={{ '--d': '0.8s' }}>
           <a className="fh-btn fh-btn--glow" href={whatsLink()} target="_blank" rel="noreferrer">
-            <i className="bi bi-whatsapp" /> Agendar aula experimental
+            <i className="bi bi-whatsapp" /> Aula experimental grátis
           </a>
           <a
             className="fh-btn fh-btn--ghost"

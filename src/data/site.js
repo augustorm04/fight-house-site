@@ -109,18 +109,34 @@ export const modalidades = [
     beneficios: ['Flexibilidade', 'Chutes rápidos e precisos', 'Disciplina e foco', 'Esporte olímpico'],
     publico: 'Crianças, jovens e adultos',
     intensidade: 3,
-    aulas: [{ dias: ['ter', 'qui'], hora: '17:00' }],
+    aulas: [{ dias: ['ter', 'qui'], hora: '17:30' }],
+  },
+  {
+    id: 'fightkids',
+    nome: 'Fight Kids',
+    imagem: kids,
+    cor: '#FF7AC6',
+    chamada: 'Novidade! Kickboxing de 3 a 6 anos',
+    descricao:
+      'Turma de kickboxing para os pequenos de 3 a 6 anos. Aulas lúdicas e seguras que desenvolvem coordenação motora, equilíbrio, foco e respeito — brincando e gastando energia de um jeito saudável.',
+    beneficios: ['Coordenação e equilíbrio', 'Foco e obediência a regras', 'Socialização', 'Gasto de energia saudável'],
+    publico: 'Crianças de 3 a 6 anos',
+    intensidade: 1,
+    aulas: [
+      { dias: ['ter', 'qui'], hora: '08:30' },
+      { dias: ['ter', 'qui'], hora: '16:30' },
+    ],
   },
   {
     id: 'kids',
-    nome: 'Kickboxing Kids',
+    nome: 'Kickboxing Infantil',
     imagem: kids,
     cor: '#3DDC97',
-    chamada: 'Com a Tia Jack, a partir de 6 anos',
+    chamada: 'Turma infantil com a Tia Jack, a partir de 7 anos',
     descricao:
-      'A turma infantil, conduzida pela professora Jacquelinne — a Tia Jack —, recebe crianças a partir de 6 anos. As aulas ensinam disciplina, respeito e coordenação de forma lúdica, promovendo saúde, confiança e desenvolvimento físico e emocional desde cedo.',
+      'A turma infantil, conduzida pela professora Jacquelinne — a Tia Jack —, recebe crianças a partir de 7 anos. As aulas ensinam disciplina, respeito e coordenação de forma lúdica, promovendo saúde, confiança e desenvolvimento físico e emocional desde cedo.',
     beneficios: ['Disciplina e respeito', 'Coordenação motora', 'Combate à timidez', 'Gasto de energia saudável'],
-    publico: 'Crianças a partir de 6 anos',
+    publico: 'Crianças a partir de 7 anos',
     intensidade: 2,
     aulas: [{ dias: ['seg', 'qua', 'sex'], hora: '17:00' }],
   },
@@ -154,14 +170,14 @@ export const planos = {
     { nome: '3 pessoas', preco: 210, desc: 'A família inteira no tatame', destaque: true, selo: 'Mais escolhido' },
     { nome: '4 pessoas', preco: 230, desc: 'Melhor valor por pessoa', destaque: false, selo: 'Melhor custo' },
   ],
-  observacao: 'Valores mensais. Personal Fight sob consulta. Agende sua aula experimental pelo WhatsApp.',
+  observacao: 'Valores mensais. Personal Fight sob consulta. A aula experimental é gratuita — agende pelo WhatsApp.',
 };
 
 // ---------------------------------------------------------------------
 //  EQUIPE
 // ---------------------------------------------------------------------
 export const equipe = [
-  { nome: 'Sérgio Ramos', papel: 'Fundador e head coach', bio: 'Pioneiro das artes marciais em Valparaíso, à frente da Fight House há mais de 15 anos.' },
+  { nome: 'Sérgio Ramos', papel: 'Fundador e head coach', bio: 'Pioneiro das artes marciais em Valparaíso, à frente da Fight House há mais de 17 anos.' },
   { nome: 'Jacquelinne Vasconcellos', papel: 'Cofundadora · Tia Jack', bio: 'Responsável pela turma kids, ensinando disciplina e respeito de forma leve e divertida.' },
   { nome: 'Augusto Sérgio', papel: 'Multicampeão · Personal Fight', bio: 'Atleta multicampeão de boxe e kickboxing, conduz as aulas particulares.' },
 ];
@@ -171,9 +187,9 @@ export const equipe = [
 // ---------------------------------------------------------------------
 export const faq = [
   { q: 'Nunca lutei. Posso começar?', a: 'Pode e deve! A maioria dos nossos alunos começou do zero. As aulas são adaptadas ao seu nível e você evolui no seu ritmo, com segurança.' },
-  { q: 'Como funciona a aula experimental?', a: 'Chame a gente no WhatsApp, escolha a modalidade e o horário, e venha conhecer a academia. Venha com roupa confortável de treino e uma garrafinha de água.' },
+  { q: 'A aula experimental é paga?', a: 'Não! A aula experimental é gratuita. Chame a gente no WhatsApp, escolha a modalidade e o horário, e venha conhecer a academia. Venha com roupa confortável de treino e uma garrafinha de água.' },
   { q: 'Preciso comprar equipamento logo de cara?', a: 'Não. Para começar você só precisa de roupa de treino. Com o tempo indicamos o equipamento certo para cada modalidade (luvas, bandagem, caneleira, kimono...).' },
-  { q: 'Qual a idade mínima para a turma kids?', a: 'A turma de Kickboxing Kids recebe crianças a partir de 6 anos. O Taekwondo também recebe crianças.' },
+  { q: 'Qual a idade mínima para a turma kids?', a: 'A partir de 3 anos! O Fight Kids é para crianças de 3 a 6 anos (terça e quinta, 8h30 ou 16h30) e a turma infantil de kickboxing recebe a partir de 7 anos (segunda, quarta e sexta, 17h). O Taekwondo também recebe crianças.' },
   { q: 'Posso fazer mais de uma modalidade?', a: 'Sim! Os planos de 2 e 3 modalidades têm desconto progressivo — e combinar lutas em pé com jiu-jitsu é uma ótima escolha.' },
   { q: 'Tem plano família?', a: 'Tem. A partir de 2 pessoas da mesma família o valor por pessoa cai bastante. Veja a aba “Família” nos planos.' },
 ];

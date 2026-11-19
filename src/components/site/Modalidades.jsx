@@ -46,7 +46,7 @@ export function Modalidades() {
     <section className="fh-section" id="modalidades">
       <div className="fh-container">
         <header className="fh-head" data-reveal>
-          <p className="fh-eyebrow">07 modalidades</p>
+          <p className="fh-eyebrow">{String(modalidades.length).padStart(2, '0')} modalidades</p>
           <h2 className="fh-h2">
             Escolha sua <em>luta</em>
           </h2>
