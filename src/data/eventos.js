@@ -29,6 +29,17 @@ export const eventos = [
     modalidades: ['Boxe', 'Kickboxing', 'Taekwondo'],
     descricao: '5ª edição do maior campeonato de artes marciais de Valparaíso. Pesagem dos nossos atletas na Fight House em 20/11 (feriado, sem aulas). Abertura 20/11 às 19h; boxe e kickboxing no sábado (21/11); taekwondo no domingo (22/11). Venha torcer pelos nossos atletas!',
     instagram: 'https://www.instagram.com/camamval/',
+    atletasTitulo: 'Nossos atletas no boxe — sábado, 21/11',
+    atletas: [
+      { nome: 'Gabriel Fyllype', categoria: 'Juvenil · 70 kg', flyer: '/eventos/camam/gabriel-fyllype.jpg' },
+      { nome: 'Ravi Pöttker', categoria: 'Juvenil · 80 kg', flyer: '/eventos/camam/ravi-pottker.jpg' },
+      { nome: 'Lucas André', categoria: 'Cadete · 80 kg', flyer: '/eventos/camam/lucas-andre.jpg' },
+      { nome: 'Bruno Keven', categoria: 'Elite · 65 kg', flyer: '/eventos/camam/bruno-keven.jpg' },
+      { nome: 'Pedro Noleto', categoria: 'Elite · 70 kg', flyer: '/eventos/camam/pedro-noleto.jpg' },
+      { nome: 'Vitor Mendonça', categoria: 'Elite · 80 kg', flyer: '/eventos/camam/vitor-mendonca.jpg' },
+      { nome: 'Hallyson Diego', categoria: 'Elite · +90 kg', flyer: '/eventos/camam/hallyson-diego.jpg' },
+      { nome: 'Maria Isabel', categoria: 'Sparring', flyer: '/eventos/camam/maria-isabel.jpg' },
+    ],
   },
   {
     titulo: 'Graduação Avançada de Muay Thai',

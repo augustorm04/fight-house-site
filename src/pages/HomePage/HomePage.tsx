@@ -2,7 +2,7 @@ import React from 'react';
 import '../../components/site/site.css';
 import { Navbar, Hero, Marquee } from '../../components/site/Topo';
 import { Modalidades, Horarios } from '../../components/site/Modalidades';
-import { Planos, Eventos, Sobre, Faq, Contato, Rodape, WhatsFlutuante } from '../../components/site/Secoes';
+import { Planos, Eventos, Galeria, Sobre, Faq, Contato, Rodape, WhatsFlutuante } from '../../components/site/Secoes';
 import { useRevealAll } from '../../components/site/hooks';
 
 function HomePage() {
@@ -17,6 +17,7 @@ function HomePage() {
                 <Horarios />
                 <Planos />
                 <Eventos />
+                <Galeria />
                 <Sobre />
                 <Faq />
                 <Contato />

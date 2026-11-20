@@ -3,7 +3,7 @@
 //  Edite aqui: contato, horários, valores e textos das modalidades.
 //  Tudo no site é gerado a partir deste arquivo.
 // =====================================================================
-import boxe from '../assets/modalidade-boxe.png';
+import boxe from '../assets/modalidade-boxe.jpg';
 import kickboxing from '../assets/modalidade-kickboxing.jpg';
 import kids from '../assets/modalidade-turma-kids.jpg';
 import muaythai from '../assets/modalidade-muaythai.jpg';

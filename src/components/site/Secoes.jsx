@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import logo from '../../assets/logo-fight-house-pequeno.png';
 import { planos, equipe, faq, contato, whatsLink, instagramLink, instaLink, modalidades } from '../../data/site';
 import { eventos as eventosFixos, eventosExemplo } from '../../data/eventos';
+import { galeria } from '../../data/galeria';
 import { useCountUp } from './hooks';
 
 const brl = (n) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 });
@@ -148,6 +149,24 @@ export function Eventos() {
                         </p>
                       )}
                       {ev.descricao && <p>{ev.descricao}</p>}
+                      {ev.atletas?.length > 0 && (
+                        <div className="fh-atletas">
+                          <h4>
+                            <i className="bi bi-trophy" /> {ev.atletasTitulo || 'Nossos atletas'}
+                          </h4>
+                          <ul>
+                            {ev.atletas.map((a) => (
+                              <li key={a.nome}>
+                                <a href={a.flyer} target="_blank" rel="noreferrer" aria-label={`Ver flyer de ${a.nome}`}>
+                                  <img src={a.flyer} alt={`Flyer: ${a.nome}, ${a.categoria}`} loading="lazy" />
+                                  <b>{a.nome}</b>
+                                  <small>{a.categoria}</small>
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                       {ev.modalidades?.length > 0 && (
                         <div className="fh-event__tags">
                           {ev.modalidades.map((m) => (
@@ -288,6 +307,39 @@ export function Sobre() {
               </div>
             </article>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+export function Galeria() {
+  return (
+    <section className="fh-section fh-section--alt" id="galeria">
+      <div className="fh-container">
+        <header className="fh-head" data-reveal>
+          <p className="fh-eyebrow">Galeria</p>
+          <h2 className="fh-h2">
+            Por dentro dos <em>treinos</em>
+          </h2>
+        </header>
+        <div className="fh-gallery">
+          {galeria.map((g) =>
+            g.video ? (
+              <figure key={g.video} className="fh-gallery__item is-video" data-reveal>
+                <video src={g.video} poster={g.poster} controls playsInline preload="none" />
+                <figcaption>{g.legenda}</figcaption>
+              </figure>
+            ) : (
+              <figure key={g.foto} className="fh-gallery__item" data-reveal>
+                <a href={g.foto} target="_blank" rel="noreferrer">
+                  <img src={g.foto} alt={g.legenda} loading="lazy" />
+                </a>
+                <figcaption>{g.legenda}</figcaption>
+              </figure>
+            )
+          )}
         </div>
       </div>
     </section>

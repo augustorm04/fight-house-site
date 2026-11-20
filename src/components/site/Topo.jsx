@@ -10,6 +10,7 @@ const LINKS = [
   ['horarios', 'Horários'],
   ['planos', 'Planos'],
   ['eventos', 'Eventos'],
+  ['galeria', 'Galeria'],
   ['sobre', 'Sobre'],
   ['contato', 'Contato'],
 ];
