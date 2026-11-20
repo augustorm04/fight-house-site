@@ -63,6 +63,9 @@ export function useNowBrasilia() {
     const parts = new Intl.DateTimeFormat('en-US', {
       timeZone: 'America/Sao_Paulo',
       weekday: 'short',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
       hour: '2-digit',
       minute: '2-digit',
       hour12: false,
@@ -70,7 +73,7 @@ export function useNowBrasilia() {
     const p = Object.fromEntries(parts.map((x) => [x.type, x.value]));
     const map = { Mon: 'seg', Tue: 'ter', Wed: 'qua', Thu: 'qui', Fri: 'sex', Sat: 'sab', Sun: 'dom' };
     const h = p.hour === '24' ? '00' : p.hour;
-    return { dia: map[p.weekday], hora: `${h}:${p.minute}` };
+    return { dia: map[p.weekday], hora: `${h}:${p.minute}`, data: `${p.year}-${p.month}-${p.day}` };
   };
   const [now, setNow] = useState(get);
   useEffect(() => {
@@ -86,3 +89,11 @@ export const scrollToId = (id) => {
   const y = el.getBoundingClientRect().top + window.scrollY - 72;
   window.scrollTo({ top: y, behavior: 'smooth' });
 };
+
+/** Soma dias a uma data 'AAAA-MM-DD'. */
+export const somaDias = (data, n) => {
+  const d = new Date(`${data}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+};
+

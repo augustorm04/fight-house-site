@@ -27,7 +27,7 @@ export const eventos = [
     tipo: 'participa',
     local: 'Complexo Esportivo Jardim Oriente e Centro de Treinamento de Artes Marciais — Valparaíso de Goiás',
     modalidades: ['Boxe', 'Kickboxing', 'Taekwondo'],
-    descricao: '5ª edição do maior campeonato de artes marciais de Valparaíso. Abertura 20/11 às 19h; boxe e kickboxing no sábado (21/11); taekwondo no domingo (22/11). Venha torcer pelos nossos atletas!',
+    descricao: '5ª edição do maior campeonato de artes marciais de Valparaíso. Pesagem dos nossos atletas na Fight House em 20/11 (feriado, sem aulas). Abertura 20/11 às 19h; boxe e kickboxing no sábado (21/11); taekwondo no domingo (22/11). Venha torcer pelos nossos atletas!',
     instagram: 'https://www.instagram.com/camamval/',
   },
   {

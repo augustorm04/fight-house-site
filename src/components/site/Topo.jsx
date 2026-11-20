@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import logo from '../../assets/logo-fight-house-pequeno.png';
 import bg from '../../assets/academia-background.png';
 import { modalidades, whatsLink, instagramLink } from '../../data/site';
-import { scrollToId } from './hooks';
+import { scrollToId, useNowBrasilia } from './hooks';
+import { avisosAtivos } from '../../data/avisos';
 
 const LINKS = [
   ['modalidades', 'Modalidades'],
@@ -73,6 +74,7 @@ export function Navbar() {
 }
 
 export function Hero() {
+  const now = useNowBrasilia();
   const nomes = modalidades.filter((m) => !m.sobConsulta).map((m) => m.nome);
   const [i, setI] = useState(0);
   useEffect(() => {
@@ -97,6 +99,7 @@ export function Hero() {
       <div className="fh-hero__shade" aria-hidden="true" />
       <div className="fh-hero__grain" aria-hidden="true" />
       <div className="fh-container fh-hero__content">
+        <AvisoBox avisos={avisosAtivos(now.data)} className="fh-aviso--hero fh-anim" />
         <p className="fh-hero__kicker fh-anim" style={{ '--d': '0.1s' }}>
           <span className="fh-dot" /> Valparaíso de Goiás · +17 anos de história
         </p>
@@ -158,4 +161,18 @@ export function Marquee() {
       </div>
     </div>
   );
+}
+
+/** Avisos do dia (feriados etc.), na hora de Brasília. */
+export function AvisoBox({ avisos, className = '' }) {
+  if (!avisos.length) return null;
+  return avisos.map((a) => (
+    <div key={a.de + a.titulo} className={`fh-aviso ${className}`} role="status">
+      <i className="bi bi-megaphone-fill" aria-hidden="true" />
+      <div>
+        <b>{a.titulo}</b>
+        <span>{a.texto}</span>
+      </div>
+    </div>
+  ));
 }

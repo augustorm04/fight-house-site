@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { modalidades, whatsLink, DIAS, gradeHorarios, professores, professoresDe, instaLink } from '../../data/site';
-import { useNowBrasilia } from './hooks';
+import { useNowBrasilia, somaDias } from './hooks';
+import { AvisoBox } from './Topo';
+import { avisosAtivos, semAula } from '../../data/avisos';
 
 const diasTexto = (dias) => dias.map((d) => DIAS.find((x) => x.id === d)?.curto).join(' · ');
 
@@ -184,6 +186,7 @@ export function Horarios() {
     const hoje = ordem.indexOf(now.dia);
     for (let k = 0; k < 7; k++) {
       const dia = ordem[(hoje + k) % 7];
+      if (semAula(somaDias(now.data, k))) continue;
       const aulas = gradeHorarios.filter((g) => g.dia === dia && (k > 0 || g.hora > now.hora));
       if (aulas.length) return { ...aulas[0], hoje: k === 0, amanha: k === 1 };
     }
@@ -208,6 +211,7 @@ export function Horarios() {
           <h2 className="fh-h2">
             Horários das <em>aulas</em>
           </h2>
+          <AvisoBox avisos={avisosAtivos(now.data)} className="fh-aviso--grade" />
           {proxima && (
             <p className="fh-live">
               <span className="fh-dot fh-dot--live" />

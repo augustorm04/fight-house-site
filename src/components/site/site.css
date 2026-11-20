@@ -1829,3 +1829,39 @@
     animation: none !important;
   }
 }
+
+/* ---------- Avisos (feriados etc.) ---------- */
+.fh-aviso {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 560px;
+  padding: 12px 16px;
+  border: 1px solid rgba(249, 239, 35, 0.45);
+  border-left: 4px solid var(--y);
+  border-radius: 12px;
+  background: rgba(10, 10, 14, 0.82);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.fh-aviso > i {
+  color: var(--y);
+  font-size: 1.1rem;
+  margin-top: 1px;
+}
+.fh-aviso b {
+  display: block;
+  color: var(--y);
+  font-size: 0.95rem;
+}
+.fh-aviso span {
+  color: var(--muted);
+}
+.fh-aviso--hero {
+  margin-bottom: 18px;
+}
+.fh-aviso--grade {
+  margin: 16px auto 0;
+}
