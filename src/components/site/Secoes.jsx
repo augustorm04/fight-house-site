@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import logo from '../../assets/logo-fight-house-pequeno.png';
 import { planos, equipe, faq, contato, whatsLink, instagramLink, instaLink, modalidades } from '../../data/site';
-import { eventos as eventosFixos, eventosExemplo } from '../../data/eventos';
+import { eventos as eventosFixos, eventosExemplo, postsInstagram } from '../../data/eventos';
 import { galeria } from '../../data/galeria';
 import { useCountUp } from './hooks';
 
@@ -224,6 +224,24 @@ export function Eventos() {
                   {p.tipo === 'VIDEO' && <i className="bi bi-play-fill fh-insta__play" />}
                 </a>
               ))}
+            </div>
+          )}
+          {(insta.status === 'off' || insta.status === 'vazio') && postsInstagram.length > 0 && (
+            <div className="fh-insta__embeds">
+              {postsInstagram.map((url) => {
+                const m = url.match(/instagram\.com\/(?:[^/]+\/)?(p|reel)\/([\w-]+)/);
+                if (!m) return null;
+                return (
+                  <iframe
+                    key={m[2]}
+                    src={`https://www.instagram.com/${m[1]}/${m[2]}/embed/`}
+                    title="Post do Instagram"
+                    loading="lazy"
+                    scrolling="no"
+                    allowtransparency="true"
+                  />
+                );
+              })}
             </div>
           )}
           {(insta.status === 'off' || insta.status === 'vazio') && (

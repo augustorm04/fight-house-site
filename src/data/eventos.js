@@ -61,6 +61,23 @@ export const eventos = [
   // },
 ];
 
+// =====================================================================
+//  POSTS DO INSTAGRAM (sem token)
+//
+//  Enquanto o token do Instagram não estiver configurado, o bloco
+//  "Direto do Instagram" mostra estes posts incorporados.
+//  Para adicionar: no Instagram, "..." → Copiar link, e cole aqui
+//  (o mais novo primeiro). Funciona com /p/ e /reel/.
+// =====================================================================
+export const postsInstagram = [
+  'https://www.instagram.com/reel/Dd07gFIKpiA/',
+  'https://www.instagram.com/p/DbmFFV1AH2s/',
+  'https://www.instagram.com/p/DYr-4EGIHF6/',
+  'https://www.instagram.com/p/DZV9NOqGWeh/',
+  'https://www.instagram.com/p/DYpRtAxxmtV/',
+  'https://www.instagram.com/reel/DTWK70LDv0f/',
+];
+
 // Exemplos que aparecem APENAS no modo de desenvolvimento (npm run dev),
 // para você ver como fica o layout. Nunca vão para o site publicado.
 export const eventosExemplo = [
