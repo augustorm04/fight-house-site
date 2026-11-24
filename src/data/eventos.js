@@ -72,8 +72,8 @@ export const eventos = [
 export const postsInstagram = [
   'https://www.instagram.com/reel/Dd07gFIKpiA/',
   'https://www.instagram.com/p/DbmFFV1AH2s/',
-  'https://www.instagram.com/p/DYr-4EGIHF6/',
   'https://www.instagram.com/p/DZV9NOqGWeh/',
+  'https://www.instagram.com/p/DYr-4EGIHF6/',
   'https://www.instagram.com/p/DYpRtAxxmtV/',
   'https://www.instagram.com/reel/DTWK70LDv0f/',
 ];
