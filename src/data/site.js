@@ -49,8 +49,8 @@ export const professores = {
   isabel: {
     nome: 'Maria Isabel Vogel',
     curto: 'Prof. Isabel', // nome curto usado na grade de horários
-    papel: 'Instrutora · Fight Kids',
-    bio: 'Atleta de kickboxing, faixa marrom e instrutora em formação, totalmente capacitada para conduzir o Fight Kids da manhã. Estudante de Fisioterapia.',
+    papel: 'Instrutora · Kickboxing Kids',
+    bio: 'Atleta de kickboxing, faixa marrom e instrutora em formação, totalmente capacitada para conduzir o Kickboxing Kids da manhã. Estudante de Fisioterapia.',
     instagram: 'mariaisabelvogel',
   },
   kim: {
@@ -145,13 +145,13 @@ export const modalidades = [
       'Arte marcial coreana e esporte olímpico que combina técnica, velocidade e explosão, com ênfase em chutes rápidos e precisos. Desenvolve flexibilidade, coordenação, disciplina, autocontrole e confiança — dentro e fora do tatame. Aulas com o mestre Victor Ferrari, da Equipe Keumgang.',
     equipe: { nome: 'Equipe Keumgang', instagram: 'taekwondo_keumgang' },
     beneficios: ['Flexibilidade', 'Chutes rápidos e precisos', 'Disciplina e foco', 'Esporte olímpico'],
-    publico: 'Crianças, jovens e adultos',
+    publico: 'A partir de 13 anos',
     intensidade: 3,
     aulas: [{ dias: ['ter', 'qui'], hora: '17:30', prof: 'victor' }],
   },
   {
     id: 'fightkids',
-    nome: 'Fight Kids',
+    nome: 'Kickboxing Kids',
     imagem: kids,
     cor: '#FF7AC6',
     chamada: 'Novidade! Kickboxing de 3 a 6 anos',
@@ -167,12 +167,12 @@ export const modalidades = [
   },
   {
     id: 'kids',
-    nome: 'Kickboxing Infantil',
+    nome: 'Kickboxing Juniors',
     imagem: kids,
     cor: '#3DDC97',
-    chamada: 'Turma infantil com a Tia Jack, a partir de 7 anos',
+    chamada: 'Kickboxing Juniors com a Tia Jack, a partir de 7 anos',
     descricao:
-      'A turma infantil, conduzida pela professora Jacquelinne — a Tia Jack —, recebe crianças a partir de 7 anos. As aulas ensinam disciplina, respeito e coordenação de forma lúdica, promovendo saúde, confiança e desenvolvimento físico e emocional desde cedo.',
+      'O Kickboxing Juniors, conduzido pela professora Jacquelinne — a Tia Jack —, recebe crianças a partir de 7 anos. As aulas ensinam disciplina, respeito e coordenação de forma lúdica, promovendo saúde, confiança e desenvolvimento físico e emocional desde cedo.',
     beneficios: ['Disciplina e respeito', 'Coordenação motora', 'Combate à timidez', 'Gasto de energia saudável'],
     publico: 'Crianças a partir de 7 anos',
     intensidade: 2,
@@ -229,7 +229,7 @@ export const faq = [
   { q: 'Nunca lutei. Posso começar?', a: 'Pode e deve! A maioria dos nossos alunos começou do zero. As aulas são adaptadas ao seu nível e você evolui no seu ritmo, com segurança.' },
   { q: 'A aula experimental é paga?', a: 'Não! A aula experimental é gratuita. Chame a gente no WhatsApp, escolha a modalidade e o horário, e venha conhecer a academia. Venha com roupa confortável de treino e uma garrafinha de água.' },
   { q: 'Preciso comprar equipamento logo de cara?', a: 'Não. Para começar você só precisa de roupa de treino. Com o tempo indicamos o equipamento certo para cada modalidade (luvas, bandagem, caneleira, kimono...).' },
-  { q: 'Qual a idade mínima para a turma kids?', a: 'A partir de 3 anos! O Fight Kids é para crianças de 3 a 6 anos (terça e quinta, 8h30 ou 16h30) e a turma infantil de kickboxing recebe a partir de 7 anos (segunda, quarta e sexta, 17h). O Taekwondo também recebe crianças.' },
+  { q: 'Qual a idade mínima para a turma kids?', a: 'A partir de 3 anos! O Kickboxing Kids é para crianças de 3 a 6 anos (terça e quinta, 8h30 ou 16h30) e o Kickboxing Juniors recebe a partir de 7 anos (segunda, quarta e sexta, 17h). O Taekwondo é a partir de 13 anos.' },
   { q: 'Posso fazer mais de uma modalidade?', a: 'Sim! Os planos de 2 e 3 modalidades têm desconto progressivo — e combinar, por exemplo, boxe com muay thai é uma ótima escolha.' },
   { q: 'Tem plano família?', a: 'Tem. A partir de 2 pessoas da mesma família o valor por pessoa cai bastante. Veja a aba “Família” nos planos.' },
 ];
