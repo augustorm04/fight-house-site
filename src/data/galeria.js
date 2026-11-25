@@ -8,7 +8,7 @@
 // =====================================================================
 
 export const galeria = [
-  { video: '/galeria/fight-kids-aula.mp4', poster: '/galeria/fight-kids-aula.jpg', legenda: 'Aula de Fight Kids' },
+  { video: '/galeria/fight-kids-aula.mp4', poster: '/galeria/fight-kids-aula.jpg', legenda: 'Aula de Kickboxing Kids' },
   { foto: '/galeria/muaythai-turma-1.jpg', legenda: 'Turma de Muay Thai' },
   { foto: '/galeria/boxe-sparring.jpg', legenda: 'Sparring de boxe' },
   { foto: '/galeria/muaythai-turma-2.jpg', legenda: 'Turma de Muay Thai' },

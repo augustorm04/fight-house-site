@@ -24,12 +24,12 @@ export const modalidades = [
         "descricao": "O kickboxing é uma luta que combina socos e chutes, com até 8 modalidades que variam nas regras e técnicas. A prática é excelente para quem busca competir, melhorar o condicionamento físico e desenvolver força, resistência e coordenação."
     },
     {
-        "titulo": "Kickboxing infantil",
+        "titulo": "Kickboxing Juniors",
         "imagem": `${kickboxingInfantil}`,
         "dias": ["seg/qua/sex"],
         "horarios": ["17:00 hrs"],
-        "subtitulo": "Turma infantil",
-        "descricao": "A turma infantil de kickboxing, liderada pela professora Jacquelinne, a Tia Jack, é para crianças a partir de 6 anos. As aulas ensinam disciplina, coordenação, respeito e promovem saúde e confiança, ajudando no desenvolvimento físico e emocional desde cedo."
+        "subtitulo": "A partir de 7 anos",
+        "descricao": "O Kickboxing Juniors, liderado pela professora Jacquelinne, a Tia Jack, é para crianças a partir de 7 anos. As aulas ensinam disciplina, coordenação, respeito e promovem saúde e confiança, ajudando no desenvolvimento físico e emocional desde cedo."
     },
     {
         "titulo": "Muay thai",
