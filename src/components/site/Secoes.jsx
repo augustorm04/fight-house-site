@@ -478,7 +478,12 @@ export function Rodape() {
             <i className="bi bi-geo-alt" />
           </a>
         </div>
-        <p className="fh-footer__copy">© {new Date().getFullYear()} Fight House · Valparaíso de Goiás - GO</p>
+        <p className="fh-footer__copy">
+          © {new Date().getFullYear()} Fight House · Valparaíso de Goiás - GO ·{' '}
+          <a href="/politica-privacidade" className="fh-link">
+            Política de Privacidade
+          </a>
+        </p>
       </div>
     </footer>
   );
